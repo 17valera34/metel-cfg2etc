@@ -1,0 +1,6 @@
+net_ip=192.168.1.10
+net_mask=255.255.255.0
+net_gw=192.168.1.200
+net_dns=8.8.8.8
+net_other="abcde"
+# komentar
