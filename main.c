@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// Функция для вывода инструкции
+// Prints help message for the user
 void print_help()
 {
     printf("Is used: metel-cfg2etc -c network -i <input_filename> -o <output_filename>\n");
@@ -11,12 +11,15 @@ void print_help()
     printf("  -o <output_filename> Output file with results\n");
 }
 
+// Validates command-line arguments and extracts input/output file names
 int check_args(int args, char *argv[], char **input_file, char **output_file)
 {
     if (args != 7)
     {
         return 0;
     }
+
+    // Check the expected flags and section name
     if (strcmp(argv[1], "-c") != 0 || strcmp(argv[2], "network") != 0)
     {
         return 0;
@@ -44,6 +47,7 @@ int main(int argc, char *argv[])
     char *input_file = NULL;
     char *output_file = NULL;
 
+    // Check and parse arguments
     if (!check_args(argc, argv, &input_file, &output_file))
     {
         print_help();
@@ -126,8 +130,6 @@ int main(int argc, char *argv[])
 
     fclose(fout);
     printf("File '%s' created succesfully!\n", output_file);
-
-    
 
     return 0;
 }
