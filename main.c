@@ -4,7 +4,7 @@
 // Prints help message for the user
 void print_help()
 {
-    printf("Is used: metel-cfg2etc -c network -i <input_filename> -o <output_filename>\n");
+    printf("Is used: main.exe -i <input_filename> -o <output_filename>\n");
     printf("Parameters:\n");
     printf("  -c network          Configuration section (should be 'network')\n");
     printf("  -i <input_filename> Input file with configuration\n");
